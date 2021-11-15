@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+.center {
+    background-color: saddlebrown;
+}
+
+.title{
+    width:800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 40px;
+}
+
+.under-title {
+    width:500px;
+    margin: 0 auto;
+    text-align: center;
+    padding:  30px;
+    font-weight: bold;
+
+}
+
+nav {
+    float: left;
+    width: auto;
+    padding: 0%;
+}
+
+
+.results {
+    display: flex;
+    justify-content: center;
+}
+
