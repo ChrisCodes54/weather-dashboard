@@ -19,15 +19,13 @@
     </header>
 
     <main>
-        <h2 class="subtitle">Showing Weather for: <span id="city-search-term"></span></h2>
-        <div class="results col-12">
-            <section id="current-weather-container" class="list-group"></section>
-            <section id="weather-forecast-container" class="list-group"></section>
-        </div>
-
-
-        <nav>
+        
         <div class="city-search">
+            <div class="current-weather">
+                <h2 class="subtitle">Showing Weather for: <span id="city-search-term"></span></h2>
+                <section id="current-weather-container"></section>
+
+            </div>
             <h3>Search By City Below</h3>
             <form id="user-form" class="card-body">
             <label class="form-label" for="city">City: </label>
@@ -35,13 +33,20 @@
             <button id="searchBtn" type="submit" class="btn">Get Weather!</button>
             </form>
         </div>
-
+        
         <div>
             <h3 class="city-search text-uppercase">Recent Searches:</h3>
             <div class="card-body">
-            <button class="recent-btn">Recent search here</button>
+                <button class="recent-btn">Recent search here</button>
+            </div>
         </div>
-        </nav>
+        
+
+
+        <div>
+            <section id="weather-forecast-container"></section>
+        </div>
+
 
 
     </main>

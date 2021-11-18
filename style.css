@@ -14,7 +14,7 @@
 }
 
 .under-title {
-    width:500px;
+    /* width:500px; */
     margin: 0 auto;
     text-align: center;
     padding:  30px;
@@ -22,15 +22,53 @@
 
 }
 
-nav {
-    float: left;
-    width: auto;
-    padding: 0%;
-}
-
-
-.results {
+.city-search {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
+
+#weather-forecast-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+.card {
+    background-color: red;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 15%;
+}
+
+ /* .card-body {
+    width: min-content;
+} */
+
+/* .card-body p {
+    margin: 0;
+    width: 50px;
+} */
+
+
+
+
+
+
+
+
+/* .current-weather h2 {
+    width: 50%;
+    margin-right: 0;
+}
+.current-weather section {
+    width: 50%;
+    margin: 0;
+}
+
+.current-weather section div {
+    margin: 0px;
+} */
+
+
 
