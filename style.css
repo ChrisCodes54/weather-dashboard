@@ -24,7 +24,11 @@
 
 .city-search {
     display: flex;
-    flex-direction: column;
+}
+
+#current-weather-container {
+    display: flex;
+    justify-content: center;
 }
 
 #weather-forecast-container {
@@ -33,12 +37,21 @@
     justify-content: space-evenly;
 }
 
+.searchbox {
+    display: inline-block;
+    
+}
+
 
 .card {
     background-color: red;
     padding: 20px;
     border: 2px solid black;
     border-radius: 15%;
+}
+
+.recent-btn {
+    margin: 10px;
 }
 
  /* .card-body {
@@ -51,6 +64,7 @@
 } */
 
 
+/* center current weather, add days, add recent search, and show current city search after showing weather for: */
 
 
 
