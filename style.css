@@ -59,6 +59,22 @@ body {
     margin: 10px;
 }
 
+.safe{
+    color: green;
+}
+
+.moderate{
+    color: orange
+}
+
+.high{
+    color: red;
+}
+
+.danger {
+    color: purple;
+}
+
  /* .card-body {
     width: min-content;
 } */
