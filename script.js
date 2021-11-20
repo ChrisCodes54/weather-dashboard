@@ -36,6 +36,12 @@ function getCurrentWeather(citysearch) {
   .then(data => {
     console.log(data)
     let cardTitle = $("<h2 class='card-title>").text(data.name);
+    let icon = data.weather[0].icon
+    let imgTag = document.createElement("img")
+    let imgSrc = 'https://openweathermap.org/img/w/' + icon + '.png';
+    imgTag.setAttribute("src", imgSrc);
+    console.log(icon)
+    let date = $("<p class= 'card-text'>").text(moment.unix(data.dt).format('dddd l'));   
     let temp = $("<p class='card-text'>").text("Temperature: " + data.main.temp + " F");
     let humidity =$("<p class='card-text'>").text("Humidity: " + data.main.humidity);
     let wind =$("<p class='card-text'>").text("Wind Speed: " + data.wind.speed);
@@ -45,7 +51,7 @@ function getCurrentWeather(citysearch) {
     let cardBody = $("<div class='card-body'>")
 
     cardHeader.append(cardTitle)
-    cardBody.append(temp, humidity, wind)
+    cardBody.append(imgTag, date, temp, humidity, wind)
     card.append(cardHeader, cardBody)
 
     weathercontainer.append(card)
@@ -67,11 +73,17 @@ function getCurrentWeather(citysearch) {
     .then(response => response.json())
     .then(data => {
       console.log("FIVE DAY DATA",data)
-      for(i = 0; i < 5; i++) {
+      for(i = 1; i < 6; i++) {
 
         let weatherContainer = $("#weather-forecast-container")
 
       // let cardTitle = $("<h2 class='card-title>").text(data.name);
+      // let date = moment.unix(data.daily[i].dt).format('dddd l');
+      let icon = data.daily[i].weather[0].icon
+      let imgTag = document.createElement("img")
+      let imgSrc = 'https://openweathermap.org/img/w/' + icon + '.png';
+          imgTag.setAttribute("src", imgSrc);
+      let date = $("<p class= 'card-text'>").text(moment.unix(data.daily[i].dt).format('dddd l'));     
       let temp = $("<p class='card-text'>").text("Temperature: " + data.daily[i].temp.day + " F");
       let humidity =$("<p class='card-text'>").text("Humidity: " + data.daily[i].humidity);
       let wind =$("<p class='card-text'>").text("Wind Speed: " + data.daily[i].wind_speed);
@@ -81,12 +93,20 @@ function getCurrentWeather(citysearch) {
       let cardBody = $("<div class='card-body'>")
     
       // cardHeader.append(cardTitle)
-      cardBody.append(temp, humidity, wind)
+      cardBody.append(imgTag, date, temp, humidity, wind)
       card.append(cardHeader, cardBody)
       weatherContainer.append(card);
       }
 
     })
+
+
+
+
+
+
+
+
     // let year = new Date(forecast.dt * 1000).getFullYear();
 
 

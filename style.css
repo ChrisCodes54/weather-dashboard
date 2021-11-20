@@ -22,8 +22,13 @@
 
 }
 
+body {
+    background-color: royalblue;
+}
+
 .city-search {
     display: flex;
+    /* justify-content:center; */
 }
 
 #current-weather-container {
